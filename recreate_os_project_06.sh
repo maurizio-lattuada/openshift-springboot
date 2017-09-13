@@ -6,7 +6,7 @@ cat web-ui/Dockerfile | sed 's/target\/app\.jar/app\.jar/g' | oc new-build --nam
 
 oc start-build admin-ui --from-file admin-ui/target/app.jar
 
-oc new-app myproject/admin-ui
+oc new-app web-ui/admin-ui
 
 oc expose dc admin-ui --port 8080
 

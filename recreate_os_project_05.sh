@@ -6,7 +6,7 @@ cat web-ui/Dockerfile | sed 's/target\/app\.jar/app\.jar/g' | oc new-build --nam
 
 oc start-build hello-service --from-file hello-service/target/app.jar
 
-oc new-app myproject/hello-service
+oc new-app web-ui/hello-service
 
 oc expose dc hello-service --port 8080
 
