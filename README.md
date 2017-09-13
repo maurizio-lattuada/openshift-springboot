@@ -9,6 +9,7 @@
 * start the build (uploading the app.jar file)
 
 ## Hints
+* minishift start
 * `$ oc new-build --help`
 * `$ oc run-build --help`
 * `$ oc get bc`
