@@ -1,19 +1,16 @@
 ###### Software Catering Training
 #### Workshop: Kickstarter Openshift & Spring Boot  https://github.com/software-catering/training-openshift-springboot
-# Preparation
+# step_2: run web-ui in Docker
 
 ## Todo:
-* install JDK 8: 
-http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-* install Maven: 
-https://maven.apache.org/download.cgi
-* install git (command line) client: 
-https://git-scm.com/downloads
-* install docker:
-  * Mac: https://store.docker.com/editions/community/docker-ce-desktop-mac
-  * Windows: https://store.docker.com/editions/community/docker-ce-desktop-windows
-* install Redhat Minishift: 
-https://docs.openshift.org/latest/minishift/getting-started/installing.html
-* make sure you have a terminal with bash
-* clone this git repo
-* run `mvn compile` in order to get all the dependencies installed in your local maven repository
+* create a Dockerfile:
+    * based on `openjdk:8-jre-alpine` (https://hub.docker.com/_/openjdk/)
+    * add the fat-jar of the web-ui
+    * make sure the jar is started (hint: `CMD`)
+* build the docker image with tag `web-ui
+* run the docker image
+* check if it's working: http://localhost:8080/      
+
+## Hints:
+* https://docs.docker.com/engine/reference/builder/
+* `$ docker run --help`
