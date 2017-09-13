@@ -2,7 +2,7 @@
 
 set -e
 
-oc new-app myproject/web-ui
+oc new-app web-ui/web-ui
 
 oc expose dc web-ui --port 8080
 
