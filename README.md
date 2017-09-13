@@ -1,16 +1,15 @@
 ###### Software Catering Training
 #### Workshop: Kickstarter Openshift & Spring Boot  https://github.com/software-catering/training-openshift-springboot
-# step_2: run web-ui in Docker
+# step_3: create & run build on OpenShift
 
 ## Todo:
-* create a Dockerfile:
-    * based on `openjdk:8-jre-alpine` (https://hub.docker.com/_/openjdk/)
-    * add the fat-jar of the web-ui
-    * make sure the jar is started (hint: `CMD`)
-* build the docker image with tag `web-ui
-* run the docker image
-* check if it's working: http://localhost:8080/      
+* create build configuration with openshift cli:
+  * name it `web-ui`
+  * use the existing docker file
+* start the build (uploading the app.jar file)
 
-## Hints:
-* https://docs.docker.com/engine/reference/builder/
-* `$ docker run --help`
+## Hints
+* `$ oc new-build --help`
+* `$ oc run-build --help`
+* `$ oc get bc`
+* https://docs.openshift.com/container-platform/3.6/dev_guide/builds/index.html  
