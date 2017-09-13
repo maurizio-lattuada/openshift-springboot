@@ -5,6 +5,9 @@ import java.net.UnknownHostException;
 
 public final class ServiceIdentificationUtil {
 
+    private ServiceIdentificationUtil() {
+    }
+
     public static String getServiceIdentification() {
         String result;
 
