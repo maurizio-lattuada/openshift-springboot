@@ -2,6 +2,7 @@ package software.catering.training.hello;
 
 import java.net.UnknownHostException;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,6 @@ public class HelloService {
     
     @RequestMapping(path = "/", method = RequestMethod.GET, produces = "application/json")
     public HelloResponse hello() throws UnknownHostException {
-        return new HelloResponse("test");
+        return new HelloResponse(RandomStringUtils.random(10));
     }
 }
