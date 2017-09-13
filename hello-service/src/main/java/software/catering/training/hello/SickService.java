@@ -32,7 +32,6 @@ public class SickService implements HealthIndicator {
         Health.Builder health;
         if (sick) {
             health = Health.down();
-            return health.build();
         } else {
             health = Health.up();
         }

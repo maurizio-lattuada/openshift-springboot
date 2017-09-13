@@ -20,7 +20,7 @@ public class HelloService {
     @Autowired
     private SickService sickService;
 
-    @RequestMapping(path = "/", method = RequestMethod.GET)
+    @RequestMapping(path = "/hello", method = RequestMethod.GET)
     public HelloResponse hello() throws UnknownHostException {
 
         if (sickService.isSick()) {
