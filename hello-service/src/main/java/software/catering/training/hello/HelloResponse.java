@@ -6,13 +6,13 @@ import java.util.Date;
 
 public class HelloResponse {
 
-    private final String       message;
-    private final String       ip;
+    private final String message;
+    private final String ip;
     private final String timeStamp = new Date().toString();
 
     public HelloResponse(String message) throws UnknownHostException {
-            ip = InetAddress.getLocalHost().getHostAddress();
-            this.message = message;
+        ip = InetAddress.getLocalHost().getHostAddress();
+        this.message = message;
     }
 
     public String getMessage() {
